@@ -8,6 +8,12 @@ export class SegmentService {
   analytics: AnalyticsBrowser;
 
   constructor() { 
-    this.analytics = AnalyticsBrowser.load({ writeKey: '123', cdnURL: process.env['SEGMENT_CDN'] || 'https://cdn.segment.com' });
+    this.analytics = AnalyticsBrowser.load({ 
+      writeKey: 'your-write-key-here'
+    });
+  }
+
+  getAnalytics() {
+    return this.analytics;
   }
 }
